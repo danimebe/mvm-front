@@ -1,70 +1,33 @@
-# Getting Started with Create React App
+# Frontend prueba node-react MVM - Daniel Mejia Benjumea
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Este proyecto es la solución del lado del frontend a la prueba para el cargo de desarrollador node/react en la empresa MVM Ingeniería de software
 
-## Available Scripts
+## Correr el proyecto
 
-In the project directory, you can run:
+1. Descargar o clonar el proyecto
+2. para que el proyecto funcione es necesario tener corriendo el proyecto del backend en el puerto 3001 (https://github.com/danimebe/mvm-backend)
+3. una vez con el backend corriendo podemos ejecutar el siguiente comando `npm install` para instalar las dependencias necesarias para correr el programa
+4. una vez instaladas las dependencias ejecutamos el comando `npm start` para correr la aplicación en el puerto 3000
 
-### `npm start`
+## Modulos
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### Valores
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+1. En este modulo, se muestran en tiempo real los valores que han sido agregados al archivo "valores.txt" del back, este archivo se encuentra en la ruta `src/db/valores.txt` del proyecto del backend
 
-### `npm test`
+![Valores image](./images/valores.png)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+2. Este componente está conectado al backend siguiendo el protocolo websocket, por lo cual cuando actualicemos el archivo `src/db/valores.txt` este componente se debería actualizar en tiempo real (al momento de guardar el archivo).
 
-### `npm run build`
+    - Antes de actualizar el archivo
+    ![valores-antes](./images/valores-antes.png)
+    - Al agregar una fila al archivo "valores.txt" y guardar se debe actualizar automaticamente
+    ![agregar-valor](./images/add-valor.gif)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Usuarios
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+1. En este modulo podemos usar los métodos http (GET, POST, PUT, DELETE) implementados en el back siguiendo cada uno de los botones, estos usuarios quedan guardados en el archivo `src/db/users.json` del proyecto backend
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+![users](./images/users.png)
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
